@@ -63,6 +63,12 @@ body{
         h3{
             font-size: 2rem;
         }
+        small{
+            margin-top: 10px;
+            color: red;
+            font-weight: bolder;
+            transition: .8s ease-in-out;
+        }
         .formgroup{
             display: flex;
             width: 100%;
@@ -117,6 +123,16 @@ body{
         @include responsive() {
             @include columnResponsive();
             height: 38vh;
+        }
+        small{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 30% auto;
+            font-family: 'Rubik', sans-serif;
+            font-weight: bolder;
+            color: gray;
         }
         .task{
             display: flex;

@@ -9,14 +9,26 @@ const App = () => {
 
   const [task, setTask] = useState<string>("");
   const [todo, setTodo] = useState<ITask[]>([]);
+  const [errorMessage, setErrorMessage] = useState<string>("");
+  const [empty, setEmpty] = useState<string>('No task');
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
     setTask(e.target.value);
   };
 
   const addTask = (): void => {
-    const newTask = {taskName: task}
-    setTodo([...todo, newTask]);
-    setTask("");
+
+    if(task === ""){
+      setErrorMessage('Please input a task');
+      setTimeout(() => {
+        setErrorMessage("");
+      }, 4000);
+    }else{
+      setEmpty("");
+      const newTask = {taskName: task};
+      setTodo([...todo, newTask]);
+      setTask("");
+    }
+
   }
 
   const completeTask = (taskNameToDelete: string): void => {
@@ -25,15 +37,15 @@ const App = () => {
     }))
   }
 
-
-
-
   return (
     <div className="App">
+      
       <div className="Header">
         <Heading title={'Todo List (TypeScript)'} />
       </div>
+
       <div className="tbody">
+
         <div className="inputsection">
           <h3>Add Task: </h3>
           <div className="formgroup">
@@ -44,12 +56,16 @@ const App = () => {
             />
             <button type='button' className="btn" onClick={addTask}>Add</button>
           </div>
+          {errorMessage && <small>{errorMessage}</small>}
         </div>
+
         <div className="todoListsection">
+          {empty && <small>{empty}</small>}
           {todo.slice().reverse().map((task: ITask, key: number) => {
             return <TodoTask key={key} task={task} completeTask={completeTask} />
           })}
         </div>
+
       </div>
     </div>
   );

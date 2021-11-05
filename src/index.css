@@ -98,6 +98,14 @@ body {
   font-size: 2rem;
 }
 
+.tbody .inputsection small {
+  margin-top: 10px;
+  color: red;
+  font-weight: bolder;
+  -webkit-transition: .8s ease-in-out;
+  transition: .8s ease-in-out;
+}
+
 .tbody .inputsection .formgroup {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -177,6 +185,23 @@ body {
     padding: 20px 10px;
     height: 38vh;
   }
+}
+
+.tbody .todoListsection small {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin: 30% auto;
+  font-family: 'Rubik', sans-serif;
+  font-weight: bolder;
+  color: gray;
 }
 
 .tbody .todoListsection .task {
