@@ -39,9 +39,9 @@ const App = () => {
 
   return (
     <div className="App">
-      
+
       <div className="Header">
-        <Heading title={'Todo List (TypeScript)'} />
+        <Heading title={'Todo App'} />
       </div>
 
       <div className="tbody">
@@ -60,10 +60,9 @@ const App = () => {
         </div>
 
         <div className="todoListsection">
-          {empty && <small>{empty}</small>}
-          {todo.slice().reverse().map((task: ITask, key: number) => {
+          {todo.length > 0 ? todo.slice().reverse().map((task: ITask, key: number) => {
             return <TodoTask key={key} task={task} completeTask={completeTask} />
-          })}
+          }) : <small>{empty}</small>}
         </div>
 
       </div>
