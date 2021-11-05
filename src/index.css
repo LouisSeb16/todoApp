@@ -1,0 +1,237 @@
+body {
+  font-family: 'Rubik', sans-serif;
+  margin: 0px;
+}
+
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: teal;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .title {
+    padding: 10px;
+  }
+}
+
+.title img {
+  margin-right: 10px;
+  font-size: 3rem;
+  color: white;
+}
+
+.title h1 {
+  color: white;
+  font-weight: normal;
+}
+
+@media (max-width: 700px) {
+  .title h1 {
+    font-size: 1.2rem;
+  }
+}
+
+.tbody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+@media (max-width: 700px) {
+  .tbody {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.tbody .inputsection {
+  width: 40%;
+  height: 80vh;
+  padding: 20px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: #ccc;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.2))), url(../src/assets/logo.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(../src/assets/logo.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (max-width: 700px) {
+  .tbody .inputsection {
+    margin: auto;
+    width: 94%;
+    padding: 20px 10px;
+    text-align: center;
+    height: 40vh;
+  }
+}
+
+.tbody .inputsection h3 {
+  font-size: 2rem;
+}
+
+.tbody .inputsection .formgroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.tbody .inputsection .formgroup .input {
+  width: 70%;
+  padding: 18px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+@media (max-width: 700px) {
+  .tbody .inputsection .formgroup .input {
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.tbody .inputsection .formgroup .btn {
+  padding: 18px;
+  border: 1px solid teal;
+  background-color: teal;
+  color: white;
+  border-radius: 4px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  cursor: pointer;
+  font-family: 'Rubik', sans-serif;
+}
+
+.tbody .inputsection .formgroup .btn:hover {
+  background-color: #079b9b;
+  border: 1px solid #079b9b;
+}
+
+.tbody .inputsection .imgdiv {
+  padding: 10px;
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tbody .inputsection .imgdiv img {
+  width: 100%;
+  height: 100%;
+}
+
+.tbody .todoListsection {
+  width: 60%;
+  height: 80vh;
+  padding: 20px 40px;
+  overflow-y: auto;
+}
+
+@media (max-width: 700px) {
+  .tbody .todoListsection {
+    margin: auto;
+    width: 94%;
+    padding: 20px 10px;
+    height: 38vh;
+  }
+}
+
+.tbody .todoListsection .task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px;
+  cursor: pointer;
+  border-radius: 4px;
+  -webkit-box-shadow: 4px 4px 20px #ccc;
+          box-shadow: 4px 4px 20px #ccc;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+.tbody .todoListsection .task:hover {
+  background-color: #eceaea;
+}
+
+.tbody .todoListsection .task p {
+  font-weight: bolder;
+  letter-spacing: 1px;
+  margin-left: 30px;
+}
+
+@media (max-width: 700px) {
+  .tbody .todoListsection .task p {
+    font-weight: normal;
+    margin-left: 10px;
+  }
+}
+
+.tbody .todoListsection .task button {
+  padding: 10px;
+  border: 1px solid #f7c5c5;
+  background-color: #f7c5c5;
+  cursor: pointer;
+  font-weight: bolder;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+  font-family: 'Rubik', sans-serif;
+}
+
+.tbody .todoListsection .task button:hover {
+  background-color: #f36262;
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .tbody .todoListsection .task button {
+    font-weight: normal;
+  }
+}
+/*# sourceMappingURL=index.css.map */
