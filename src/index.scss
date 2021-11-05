@@ -58,6 +58,7 @@ body{
             @include columnResponsive();
             text-align: center;
             height: 40vh;
+            background-position: center;
         }
         h3{
             font-size: 2rem;
